@@ -28,16 +28,16 @@ const data =
     prod: {
       url: 'https://graylog3.jtiweb.co.uk/streams/5e4d2e4b7fa7b70012084d9d/search',
       query: [
-        'market:hdlsde AND environment:prod AND file:exception.log',
-        'market:hdlsch AND environment:prod AND file:exception.log',
-        'market:hdlsro AND environment:prod AND file:exception.log',
-        'market:hdlsgr AND environment:prod AND file:exception.log',
-        'market:hdlsie AND environment:prod AND file:exception.log',
-        'market:hdlsca AND environment:prod AND file:exception.log',
-        'market:hdlsuk AND environment:prod AND file:exception.log',
-        'market:hdlsfr AND environment:prod AND file:exception.log',
-        'market:hdlsnl AND environment:prod AND file:exception.log',
-        'market:hdlses AND environment:prod AND file:exception.log',
+        'market:hdlsde AND environment:production AND file:exception.log',
+        'market:hdlsch AND environment:production AND file:exception.log',
+        'market:hdlsro AND environment:production AND file:exception.log',
+        'market:hdlsgr AND environment:production AND file:exception.log',
+        'market:hdlsie AND environment:production AND file:exception.log',
+        'market:hdlsca AND environment:production AND file:exception.log',
+        'market:hdlsuk AND environment:production AND file:exception.log',
+        'market:hdlsfr AND environment:production AND file:exception.log',
+        'market:hdlsnl AND environment:production AND file:exception.log',
+        'market:hdlses AND environment:production AND file:exception.log',
       ]
     }
   };
@@ -132,21 +132,21 @@ for await (env of envs) {
       } 
     });
   
-    await page.click('#search-more-actions-dropdown');
+    // await page.click('#search-more-actions-dropdown');
   
-    await page.click('#sidebar > div > div.content-col > div:nth-child(1) > div > div:nth-child(3) > div > ul > li:nth-child(1) > a');
+    // await page.click('#sidebar > div > div.content-col > div:nth-child(1) > div > div:nth-child(3) > div > ul > li:nth-child(1) > a');
   
-    await page.waitForSelector('body > div:nth-child(10) > div.fade.in.modal > div > div > div.modal-body > p:nth-child(2) > a', {
-      visible: true,
-    })
+    // await page.waitForSelector('body > div:nth-child(10) > div.fade.in.modal > div > div > div.modal-body > p:nth-child(2) > a', {
+    //   visible: true,
+    // })
   
-    await page.click('body > div:nth-child(10) > div.fade.in.modal > div > div > div.modal-body > p:nth-child(2) > a', {button: 'right'})
+    // await page.click('body > div:nth-child(10) > div.fade.in.modal > div > div > div.modal-body > p:nth-child(2) > a', {button: 'right'})
   
-    await page.keyboard.press('ArrowDown');
-    await page.keyboard.press('ArrowDown');
-    await page.keyboard.press('ArrowDown');
-    await page.keyboard.press('ArrowDown');
-    await page.keyboard.press('Enter');
+    // await page.keyboard.press('ArrowDown');
+    // await page.keyboard.press('ArrowDown');
+    // await page.keyboard.press('ArrowDown');
+    // await page.keyboard.press('ArrowDown');
+    // await page.keyboard.press('Enter');
   }
 }
 
