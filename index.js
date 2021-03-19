@@ -132,21 +132,21 @@ for await (env of envs) {
       } 
     });
   
-    // await page.click('#search-more-actions-dropdown');
+    await page.click('#search-more-actions-dropdown');
   
-    // await page.click('#sidebar > div > div.content-col > div:nth-child(1) > div > div:nth-child(3) > div > ul > li:nth-child(1) > a');
+    await page.click('#sidebar > div > div.content-col > div:nth-child(1) > div > div:nth-child(3) > div > ul > li:nth-child(1) > a');
   
-    // await page.waitForSelector('body > div:nth-child(10) > div.fade.in.modal > div > div > div.modal-body > p:nth-child(2) > a', {
-    //   visible: true,
-    // })
+    await page.waitForSelector('body > div:nth-child(10) > div.fade.in.modal > div > div > div.modal-body > p:nth-child(2) > a', {
+      visible: true,
+    })
   
-    // await page.click('body > div:nth-child(10) > div.fade.in.modal > div > div > div.modal-body > p:nth-child(2) > a', {button: 'right'})
+    await page.click('body > div:nth-child(10) > div.fade.in.modal > div > div > div.modal-body > p:nth-child(2) > a', {button: 'right'})
   
-    // await page.keyboard.press('ArrowDown');
-    // await page.keyboard.press('ArrowDown');
-    // await page.keyboard.press('ArrowDown');
-    // await page.keyboard.press('ArrowDown');
-    // await page.keyboard.press('Enter');
+    await page.keyboard.press('ArrowDown');
+    await page.keyboard.press('ArrowDown');
+    await page.keyboard.press('ArrowDown');
+    await page.keyboard.press('ArrowDown');
+    await page.keyboard.press('Enter');
   }
 }
 
