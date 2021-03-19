@@ -85,6 +85,8 @@ for await (env of envs) {
     await page.setViewport({ width: 1920, height: 1080});
 
     await page.setDefaultNavigationTimeout(0); 
+
+    await page._client.send('Page.setDownloadBehavior', {behavior: 'allow', downloadPath: process.env.DOWNLOAD_DIRECTORY});
   
     await page.goto(url, {
       waitUntil: 'networkidle0',
